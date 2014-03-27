@@ -1,7 +1,7 @@
 define([
   'Backbone',
   'underscore',
-  'jQuery'
+  'jquery'
 ], function(
   Backbone,
   _,

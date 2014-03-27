@@ -1,5 +1,5 @@
 define([
-  'jQuery',
+  'jquery',
   'underscore',
   'solutions/1/PageView',
   'solutions/1/ItemView',

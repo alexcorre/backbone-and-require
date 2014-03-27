@@ -1,5 +1,5 @@
 define([
-  'jQuery',
+  'jquery',
   'underscore',
   'Backbone',
   'solutions/2/PageCollectionView',

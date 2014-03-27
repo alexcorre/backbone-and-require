@@ -23,12 +23,26 @@ requirejs.config({
 //   }
 // });
 
-// Solution 1 - Create and render a List of 10 Items in a container with an array of models
+// exercise 1 - Create and render a List of 10 Items in a container with an array of models
+
+// require(['exercises/1/Controller'], function(Controller) {
+//   Controller.go();
+// });
+
+// solution 1 - Create and render a List of 10 Items in a container Collection and CollectionView
 
 require(['solutions/1/Controller'], function(Controller) {
   Controller.go();
 });
 
-// Solution 1 - Create and render a List of 10 Items in a container Collection and CollectionView
+// exercise 2 - Create and render a List of 10 Items in a container with an array of models
 
-//
+// require(['exercises/2/Controller'], function(Controller) {
+//   Controller.go();
+// });
+
+// solution 2 - Create and render a List of 10 Items in a container Collection and CollectionView
+
+// require(['solutions/2/Controller'], function(Controller) {
+//   Controller.go();
+// });

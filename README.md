@@ -88,6 +88,8 @@ Refresh the page and you should see:
 Part 1: Rendering a collection of items
 ---------------------------------------
 
+On mobile, given the interface, almost everything is a list! It is important to be able to render lists of items easily.
+
 In main.js lets comment out exercise 0 uncomment exercise 1.
 
 ```javascript
@@ -99,7 +101,24 @@ require(['exercises/1/Controller'], function(Controller) {
 ```
 You'll notice that we require the Controller.js file inside **exercises/1/Controller**. This returns a singleton controller that has a `start()` method. Here's where you come in. Check out the start() method and try to follow the comments to get this thing working!
 
+If you want to peek at the solution, start with **solutions/1/Controller.js**. To see the solution in action, comment out the Exercise 1, and uncomment the Solution 1. 
 
+```javascript
+// Solution 1 - Create and render a List of 10 Items in a container with an array of models
+
+require(['solutions/1/Controller'], function(Controller) {
+  Controller.go();
+});
+```
+
+Part 2: CollectionView
+---------------------------------------
+
+The solution of part 1 created Models, and looped through them to create views and appended them to the DOM. Lets try to pull out some of this boiler plate and use Backbone.Collection to manage an array of models. and build a CollectionView to automatically render the items inside it into a list. 
+
+Part 3: Events and Interaction
+-------------------------------
+Lets make it so tapping on a particular cell performs a js alert with the value and message for that Item.
 
 
 
