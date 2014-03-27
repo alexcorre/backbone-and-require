@@ -58,4 +58,9 @@ require(['Backbone'], function(Backbone) {
 });
 ```
 
+When you run the app you should see:
+
+![](https://github.com/alexcorre/backbone-and-require/raw/master/images/part0/error0.png)
+
+
 
