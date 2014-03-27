@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <meta name="apple-mobile-web-app-capable" content="no">
+
+  <title>Backbone Workshop</title>
+</head>
+<body>
+  <!-- ========= -->
+  <!-- Your HTML -->
+  <!-- ========= -->
+  <div id="container">Loading...</div>
+
+  <!-- ========= -->
+  <!-- Libraries -->
+  <!-- ========= -->
+  <script data-main="javascripts/main.js" src="/javascripts/lib/require.js"></script>
+
+  <!-- =============== -->
+  <!-- Javascript code -->
+  <!-- =============== -->
+
+  <!-- =============== -->
+  <!--    Templates    -->
+  <!-- =============== -->
+  <script type="text/template" id="page-template">
+    <div class="page">
+      <h1><%- title %></h1>
+      <ul class="items"></ul>
+    </div>
+  </script>
+
+  <script type="text/template" id="item-template">
+    <p><%- model.get('message') %> My value is: <span><%- model.get('value') %></span></p>
+  </script>
+
+</body>
+</html>

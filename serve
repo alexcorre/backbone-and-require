@@ -1,0 +1,4 @@
+#!/bin/bash
+
+SERVER=./node_modules/http-server/bin/http-server
+$SERVER -p 8888 -c-1

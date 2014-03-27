@@ -1,0 +1,8 @@
+{
+  "name": "backbone-tutorial",
+  "description": "",
+  "dependencies": {
+    "http-server": "*"
+  }
+
+}
