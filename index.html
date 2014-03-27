@@ -24,6 +24,54 @@
   <!-- =============== -->
   <!-- Javascript code -->
   <!-- =============== -->
+  <script type="text/javascript">
+    window.ITEMS = [
+      {
+        value: 3124,
+        message: 'message'
+      },
+      {
+        value: 13656,
+        message: 'some more messages'
+      },
+      {
+        value: 8798,
+        message: 'nope'
+      },
+      {
+        value: 12378,
+        message: 'something else'
+      },
+      {
+        value: 4748,
+        message: 'another person is here'
+      },
+      {
+        value: 2999,
+        message: 'here is your message'
+      },
+      {
+        value: 2909,
+        message: 'LinkedIn mobile'
+      },
+      {
+        value: 2167,
+        message: 'long long ago'
+      },
+      {
+        value: 1234,
+        message: 'in a galaxy far far away'
+      },
+      {
+        value: 8902,
+        message: 'another message here'
+      },
+      {
+        value: 8098,
+        message: 'check this out'
+      }
+    ];
+  </script>
 
   <!-- =============== -->
   <!--    Templates    -->
@@ -36,7 +84,8 @@
   </script>
 
   <script type="text/template" id="item-template">
-    <p><%- model.get('message') %> My value is: <span><%- model.get('value') %></span></p>
+    <p><%- model.get('message') %></p>
+    <p><%- model.get('value') %></p>
   </script>
 
 </body>

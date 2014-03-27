@@ -11,12 +11,6 @@ define([
   var PageView = Backbone.View.extend({
 
     /**
-     * class name to be added to this View's $el
-     * @type {String}
-     */
-    className: 'page',
-
-    /**
      * Template function for create HTML from this view
      *
      * @type {function}
@@ -30,10 +24,15 @@ define([
      */
     render: function() {
 
-      // First render the container template to set up the inital empty $el
+      // First render the container template to set up the inital empty $el. Look at the
+      // page-template in index.html to see what info we can pass to the template. Lets pass
+      // in the title 'Exercise 1'.
       this.$el.html(this.template({
         title: 'Exercise 1'
       }));
+
+      // Now that our $el is filled with the template, we want to loop through the collection
+      // and create an ItemView for each model in the list, render it, and append it to the .items ul
 
       // keep a reference to our container
       var $container = this.$('.items');
@@ -55,6 +54,7 @@ define([
         });
       }
 
+      // Always return this
       return this;
     }
 

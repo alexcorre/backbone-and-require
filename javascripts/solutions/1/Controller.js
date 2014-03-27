@@ -18,18 +18,17 @@ define([
 
     go: function() {
 
-      // Create an array of ItemModels
-      var items = [];
-      _.times(10, function(index) {
-        items[index] = new ItemModel({
-          value: index,
-          message: 'I am an Item!'
-        });
+      // Create an array of ItemModels from the global array window.ITEMS
+      var itemModels = [];
+      _.each(window.ITEMS, function(item) {
+        var model = new ItemModel(item);
+        itemModels.push(model)
       });
 
-      // create a page view and render it in the container
+      // create a PageView and set the itemModels as its 'collection' attribute. Render
+      // it and put it into the controllers container.
       var pageView = new PageView({
-        collection: items
+        collection: itemModels
       });
       pageView.render();
       this.container.html(pageView.el);

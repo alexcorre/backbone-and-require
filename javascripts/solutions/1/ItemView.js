@@ -28,10 +28,12 @@ define([
      * @return {Backbone.View} a reference to this view
      */
     render: function() {
+      // Render the template for this view with the model
       this.$el.html(this.template({
         model: this.model
       }));
 
+      // Always return this
       return this;
     }
 
