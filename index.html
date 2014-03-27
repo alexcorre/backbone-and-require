@@ -9,6 +9,11 @@
   <meta name="apple-mobile-web-app-capable" content="no">
 
   <title>Backbone Workshop</title>
+
+  <!-- =========== -->
+  <!-- Stylesheets -->
+  <!-- =========== -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 </head>
 <body>
   <!-- ========= -->
@@ -78,14 +83,14 @@
   <!-- =============== -->
   <script type="text/template" id="page-template">
     <div class="page">
-      <h1><%- title %></h1>
+      <h1 class="title"><%- title %></h1>
       <ul class="items"></ul>
     </div>
   </script>
 
   <script type="text/template" id="item-template">
-    <p><%- model.get('message') %></p>
-    <p><%- model.get('value') %></p>
+    <p><span class="label">Value: </span><%- model.get('value') %></p>
+    <p><span class="label">Message: </span><%- model.get('message') %></p>
   </script>
 
 </body>

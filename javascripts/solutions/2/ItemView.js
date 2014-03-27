@@ -16,6 +16,13 @@ define([
     tagName: 'li',
 
     /**
+     * Class to be added to this views $el
+     *
+     * @type {String}
+     */
+    className: 'item',
+
+    /**
      * Template function for create HTML from this view
      *
      * @type {function}
