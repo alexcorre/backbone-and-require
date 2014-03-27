@@ -1,6 +1,6 @@
 define([
   'Backbone',
-  'jQuery',
+  'jquery',
   'solutions/2/CollectionView',
   'solutions/2/ItemView'
 ], function(

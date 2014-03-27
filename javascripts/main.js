@@ -31,9 +31,9 @@ requirejs.config({
 
 // solution 1 - Create and render a List of 10 Items in a container Collection and CollectionView
 
-require(['solutions/1/Controller'], function(Controller) {
-  Controller.go();
-});
+// require(['solutions/1/Controller'], function(Controller) {
+//   Controller.go();
+// });
 
 // exercise 2 - Create and render a List of 10 Items in a container with an array of models
 
@@ -43,6 +43,6 @@ require(['solutions/1/Controller'], function(Controller) {
 
 // solution 2 - Create and render a List of 10 Items in a container Collection and CollectionView
 
-// require(['solutions/2/Controller'], function(Controller) {
-//   Controller.go();
-// });
+require(['solutions/2/Controller'], function(Controller) {
+  Controller.go();
+});

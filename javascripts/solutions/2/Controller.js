@@ -20,18 +20,8 @@ define([
 
     go: function() {
 
-      var items = [];
-      _.times(10, function(index) {
-
-        items[index] = {
-          value: index,
-          message: 'I am an Item!'
-        };
-
-      });
-
       // Create a new Collection of ItemModels
-      var itemsCollection = new ItemsCollection(items);
+      var itemsCollection = new ItemsCollection(window.ITEMS);
 
       // create a page view and render it in the container
       var pageView = new PageCollectionView({
