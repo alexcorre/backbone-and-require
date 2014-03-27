@@ -42,4 +42,20 @@ To:
 <script data-main="javascripts/main-solution.js" src="/javascripts/lib/require.js"></script>
 ```
 
+Part 0: Require.js
+------------------
+
+Run the app as is and load up the [page](http://localhost:8888). We've already set some stuff up for you including the script tag for require.js as seen just above part 0. We then load data main which has exercise 0 enabled.
+
+```javascript
+require(['Backbone'], function(Backbone) {
+  if (!Backbone) {
+    alert('I Cant find backbone!');
+  } else {
+    alert('I found backbone');
+  }
+  console.log('Backbone is: ', Backbone);
+});
+```
+
 
