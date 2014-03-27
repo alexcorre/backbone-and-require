@@ -43,7 +43,7 @@ To:
 ```
 
 Part 0: Quick start up with require.js
-------------------
+--------------------------------------
 
 Run the app as is and load up the [page](http://localhost:8888). We've already set some stuff up for you including the script tag for require.js as seen just above part 0. Require then then loads data-main which has exercise 0 enabled. It attempts to load a module called 'Backbone'.
 
@@ -84,6 +84,20 @@ requirejs.config({
 Refresh the page and you should see:
 
 ![](https://github.com/alexcorre/backbone-and-require/raw/master/images/part0/success0.png)
+
+Part 1: Rendering a collection of items
+---------------------------------------
+
+In main.js lets comment out exercise 0 uncomment exercise 1.
+
+```javascript
+// Exercise 1 - Create and render a List of 10 Items in a container with an array of models
+
+require(['exercises/1/Controller'], function(Controller) {
+  Controller.go();
+});
+```
+You'll notice that we require the Controller.js file inside **exercises/1/Controller**. This returns a singleton controller that has a `start()` method. Here's where you come in. Check out the start() method and try to follow the comments to get this thing working!
 
 
 
