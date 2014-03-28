@@ -1,5 +1,5 @@
 Backbone and Require Workshop
-================
+=============================
 Lets learn about require.js and backbone.js basics through coding.
 
 Backbone.js
@@ -85,7 +85,7 @@ Refresh the page and you should see:
 
 ![](https://github.com/alexcorre/backbone-and-require/raw/master/images/part0/success0.png)
 
-Part 1: Rendering a collection of items
+Part 1: Rendering an array of Models
 ---------------------------------------
 
 On mobile, given the interface, almost everything is a list! It is important to be able to render lists of items easily.
@@ -99,7 +99,7 @@ require(['exercises/1/Controller'], function(Controller) {
   Controller.go();
 });
 ```
-You'll notice that we require the Controller.js file inside **exercises/1/Controller**. This returns a singleton controller that has a `start()` method. Here's where you come in. Check out the start() method and try to follow the comments to get this thing working!
+You'll notice that we require the Controller module inside inside the file **exercises/1/Controller**. This returns a singleton controller that has a `start()` method. Here's where you come in. Check out the start() method and try to follow the comments to get this thing working!
 
 If you want to peek at the solution, start with **solutions/1/Controller.js**. To see the solution in action, comment out the Exercise 1, and uncomment the Solution 1. 
 
@@ -111,7 +111,38 @@ require(['solutions/1/Controller'], function(Controller) {
 });
 ```
 
-Part 2: CollectionView
+Asside how does the templating work?
+-----------------------------------------
+To keep the implementation simple, and since there are so few templates, we have chosen to define our templates directly in the html page. As an example see the page template:
+
+```xml
+<!-- The template used by PageView -->
+<script type="text/template" id="page-template">
+	<div class="page">
+    	<h1 class="title"><%- title %></h1>
+    	<ul class="items"></ul>
+    </div>
+</script>
+```
+This is a pretty standard pattern to use a script tag of `type="text/template"` with html/template content. Notice we include underscore template style sections like `<%- title %>`. We access the content of this template with jquery.
+
+```javascript
+$('#item-template').html()
+```
+We could just as easily fetch a template with ajax or requirejs if there was one defined in an amd function. We must create a template function from this using _.template. Hence the line in ItemView:
+
+```javascript
+/**
+ * Template function for create HTML from this view
+ *
+ * @type {function}
+ */
+ template: _.template($('#item-template').html()),
+```
+The view can use this property easily with `this.template( /* template data object */ )`
+
+
+Part 2: Using Collections and CollectionView
 ---------------------------------------
 
 The solution of part 1 created Models, and looped through them to create views and appended them to the DOM. Lets try to pull out some of this boiler plate and use Backbone.Collection to manage an array of models. and build a CollectionView to automatically render the items inside it into a list. 

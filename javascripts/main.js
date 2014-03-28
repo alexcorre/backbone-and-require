@@ -37,12 +37,12 @@ requirejs.config({
 
 // exercise 2 - Create and render a List of 10 Items in a container with an array of models
 
-// require(['exercises/2/Controller'], function(Controller) {
-//   Controller.go();
-// });
+require(['exercises/2/Controller'], function(Controller) {
+  Controller.go();
+});
 
 // solution 2 - Create and render a List of 10 Items in a container Collection and CollectionView
 
-require(['solutions/2/Controller'], function(Controller) {
-  Controller.go();
-});
+// require(['solutions/2/Controller'], function(Controller) {
+//   Controller.go();
+// });

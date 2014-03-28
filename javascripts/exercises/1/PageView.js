@@ -28,7 +28,7 @@ define([
       // page-template in index.html to see what info we can pass to the template. Lets pass
       // in the title 'Exercise 1'.
       this.$el.html(this.template({
-        title: 'Solution 1'
+        title: 'Exercise 1'
       }));
 
       // Now that our $el is filled with the template, we want to loop through the collection

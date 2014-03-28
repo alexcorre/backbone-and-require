@@ -1,8 +1,8 @@
 define([
   'Backbone',
   'jquery',
-  'solutions/2/CollectionView',
-  'solutions/2/ItemView'
+  'exercises/2/CollectionView',
+  'exercises/2/ItemView'
 ], function(
   Backbone,
   $,
@@ -26,7 +26,8 @@ define([
     template: _.template($('#page-template').html()),
 
     /**
-     * @override to return the selector for this particular view.
+     * @override to return the selector for this particular view. Can assume
+     * this is scoped to the views $el.
      *
      * @type {String}
      */
@@ -41,7 +42,7 @@ define([
 
       // First render the container template to set up the inital empty $el
       this.$el.html(this.template({
-        title: 'Solution 2'
+        title: 'Exercise 2'
       }));
 
       // Call Collection Views Render method
@@ -55,11 +56,7 @@ define([
      * @override nodeForModel to returned view $els for each model
      */
     nodeForModel: function(model) {
-      var itemView = new ItemView({
-        model: model
-      });
-
-      return itemView.render().el;
+      // TODO Implement Me!
     }
 
   });
