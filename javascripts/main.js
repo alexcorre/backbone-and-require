@@ -1,27 +1,21 @@
-// Require Main Config
-requirejs.config({
+// ===========
+// TODO Configure require.js
+// ===========
 
-  baseUrl: 'javascripts',
-
-  paths: {
-    'Backbone': 'lib/backbone',
-    'underscore': 'lib/underscore',
-    'jquery': 'http://code.jquery.com/jquery-2.1.0.min'
-  }
-
-});
-
+// ===========
 // Kickstart
+// ===========
+
 
 // Exercise 0 - Setup require.js
 
-// require(['Backbone'], function(Backbone) {
-//   if (!Backbone) {
-//     alert('I Cant find backbone!');
-//   } else {
-//     alert('I found backbone');
-//   }
-// });
+require(['Backbone'], function(Backbone) {
+  if (!Backbone) {
+    alert('I Cant find backbone!');
+  } else {
+    alert('I found backbone');
+  }
+});
 
 // exercise 1 - Create and render a List of 10 Items in a container with an array of models
 
@@ -37,9 +31,9 @@ requirejs.config({
 
 // exercise 2 - Create and render a List of 10 Items in a container with an array of models
 
-require(['exercises/2/Controller'], function(Controller) {
-  Controller.go();
-});
+// require(['exercises/2/Controller'], function(Controller) {
+//   Controller.go();
+// });
 
 // solution 2 - Create and render a List of 10 Items in a container Collection and CollectionView
 
