@@ -147,9 +147,11 @@ Part 2: Using Collections and CollectionView
 
 The solution of part 1 created Models, and looped through them to create views and appended them to the DOM. Lets try to pull out some of this boiler plate and use Backbone.Collection to manage an array of models. and build a CollectionView to automatically render the items inside it into a list. 
 
-Part 3: Events and Interaction
+Bonus: Events and Interaction
 -------------------------------
-Lets make it so tapping on a particular cell performs a js alert with the value and message for that Item.
+If you finish early. Lets make it so tapping on a particular cell performs a js alert with the value and message for that Item.
+
+There is no tutorial for this section…we will demonstrate the solution at the end.
 
 
 
