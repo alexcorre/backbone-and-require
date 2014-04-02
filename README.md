@@ -61,7 +61,7 @@ When you run the app main.js is attempting to require a module called 'Backbone'
 
 ![](https://github.com/alexcorre/backbone-and-require/raw/master/images/part0/error0.png)
 
-Lets tell require where backbone.js actually is. At the top of main.js lets add some require paths configurations to tell require where to find our libs. 
+Lets tell require where backbone.js actually is. At the top of main.js lets add some require paths configurations to tell require where to find our libs.
 
 As it turns out the latest versions of backbone, jquery, and underscore support AMD out of the box so all we have to do is tell require where to find them:
 
@@ -99,9 +99,9 @@ require(['exercises/1/Controller'], function(Controller) {
   Controller.go();
 });
 ```
-You'll notice that we require the Controller module inside inside the file **exercises/1/Controller**. This returns a singleton controller that has a `start()` method. Here's where you come in. Check out the start() method and try to follow the comments to get this thing working!
+You'll notice that we require the Controller module inside inside the file **exercises/1/Controller**. This returns a singleton controller that has a `go()` method. Here's where you come in. Check out the start() method and try to follow the comments to get this thing working!
 
-If you want to peek at the solution, start with **solutions/1/Controller.js**. To see the solution in action, comment out the Exercise 1, and uncomment the Solution 1. 
+If you want to peek at the solution, start with **solutions/1/Controller.js**. To see the solution in action, comment out the Exercise 1, and uncomment the Solution 1.
 
 ```javascript
 // Solution 1 - Create and render a List of 10 Items in a container with an array of models
@@ -145,7 +145,7 @@ The view can use this property easily with `this.template( /* template data obje
 Part 2: Using Collections and CollectionView
 ---------------------------------------
 
-The solution of part 1 created Models, and looped through them to create views and appended them to the DOM. Lets try to pull out some of this boiler plate and use Backbone.Collection to manage an array of models. and build a CollectionView to automatically render the items inside it into a list. 
+The solution of part 1 created Models, and looped through them to create views and appended them to the DOM. Lets try to pull out some of this boiler plate and use Backbone.Collection to manage an array of models. and build a CollectionView to automatically render the items inside it into a list.
 
 Bonus: Events and Interaction
 -------------------------------
