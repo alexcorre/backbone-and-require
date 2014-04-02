@@ -34,25 +34,14 @@ define([
       // Now that our $el is filled with the template, we want to loop through the collection
       // and create an ItemView for each model in the list, render it, and append it to the .items ul
 
-      // keep a reference to our container
+      // keep a reference to our container to put the models in. by doing
+      // this.$(selector) it is shorthand for this.$el.find(selector) which looks for that
+      // selector but scopes its search only to this.$el.
       var $container = this.$('.items');
 
-      // check if we have a collection
-      if (this.collection) {
-
-        // loop through each item in the collection and create a view for it
-        _.each(this.collection, function(itemModel) {
-
-          // Create a view for the current model and render it.
-          var itemView = new ItemView({
-            model: itemModel
-          });
-          itemView.render();
-
-          // add the rendered views el to the DOM
-          $container.append(itemView.el);
-        });
-      }
+      // loop through each item in the collection and create a view for it
+      // Create a view for the current model and render it.
+      // add the rendered views el to the DOM
 
       // Always return this
       return this;
