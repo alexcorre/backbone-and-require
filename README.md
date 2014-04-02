@@ -124,7 +124,7 @@ To keep the implementation simple, and since there are so few templates, we have
     </div>
 </script>
 ```
-This is a pretty standard pattern to use a script tag of `type="text/template"` with html/template content. Notice we include underscore template style sections like `<%- title %>`. We access the content of this template with jquery.
+This is a pretty standard pattern to use a script tag of `type="text/template"` with html/template content. The reason we use `type="text/template"` is so the browser does not try to execute the content of this template as javascript. Clearly this is not valid javascript. Since the browser does not support a type of `text/template` it simply ignores the content. Notice we include underscore template style sections like `<%- title %>`. We access the content of this template with jquery.
 
 ```javascript
 $('#item-template').html()
@@ -147,11 +147,10 @@ Part 2: Using Collections and CollectionView
 
 The solution of part 1 created Models, and looped through them to create views and appended them to the DOM. Lets try to pull out some of this boiler plate and use Backbone.Collection to manage an array of models. and build a CollectionView to automatically render the items inside it into a list.
 
+We dont have a step by step portion yet for this, but start from exercises/2 look at the controller and follow the comments.
+
 Bonus: Events and Interaction
 -------------------------------
 If you finish early. Lets make it so tapping on a particular cell performs a js alert with the value and message for that Item.
 
 There is no tutorial for this section…we will demonstrate the solution at the end.
-
-
-
