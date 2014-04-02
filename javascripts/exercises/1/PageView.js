@@ -1,7 +1,7 @@
 define([
   'Backbone',
   'jquery',
-  'solutions/1/ItemView'
+  'exercises/1/ItemView'
 ], function(
   Backbone,
   $,
